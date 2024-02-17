@@ -1,5 +1,6 @@
 import os
 import sys
+import requests
 
 
 """
@@ -11,6 +12,11 @@ This is Home work 2, you are allowed to work in pairs, you can only use chatGPT 
 # Additional comment for this program, any bugs or creative functions?
 
 """
+
+
+response = requests.get('https://api.tomorrow.io/v4/weather/forecast?location=42.3478,-71.0466&apikey=9tXHRpu5YkfMwpZt8ZC2XF2y0ZARlHQX')
+data = response.json()
+print(data)
 api_key = ""
 
 if len(sys.argv)<3:
