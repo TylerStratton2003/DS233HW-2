@@ -17,14 +17,20 @@ This is Home work 2, you are allowed to work in pairs, you can only use chatGPT 
 
 api_key = "https://api.tomorrow.io/v4/weather/forecast?location=42.3478,-71.0466&apikey=9tXHRpu5YkfMwpZt8ZC2XF2y0ZARlHQX"
 
-if len(sys.argv)<3:
-    print("This script is going to collect weather data and store in a csv file:")
-    print("python "+sys.argv[0]+" \"Column_Name\" windSpeed windData.csv")
-    sys.exit(0)
 
-colName = sys.argv[1]
-keyword = sys.argv[2]
-addrOut = sys.argv[3]
+print("This script is going to collect weather data and store in a csv file:")
+print("First, enter a column name:")
+colName = input("Column name:")
+print("Next, enter the keyword for the wind data you want. Options are windSpeed, windGust and windDirection.")
+keyword = input("Keyword:")
+print("Finally, type the name for your CSV file. (Remember to add \".csv\" to the end)")
+addrOut = input("CSV name:")
+#print("python "+sys.argv[0]+" \"Column_Name\" windSpeed windData.csv")
+#sys.exit(0)
+
+#colName = sys.argv[1]
+#keyword = sys.argv[2]
+#addrOut = sys.argv[3]
 
 # put your code here
 response = requests.get(api_key)
