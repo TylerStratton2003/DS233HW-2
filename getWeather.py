@@ -19,7 +19,7 @@ api_key = "https://api.tomorrow.io/v4/weather/forecast?location=42.3478,-71.0466
 
 
 print("This script is going to collect weather data and store in a csv file:")
-print("First, enter a column name:")
+print("First, enter a column name for the data requested:")
 colName = input("Column name:")
 print("Next, enter the keyword for the wind data you want. Options are windSpeed, windGust and windDirection.")
 keyword = input("Keyword:")
